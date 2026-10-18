@@ -13,3 +13,6 @@ def from_data(username : str = Form() ,  passw : str = Form(),phono : int = Form
     }
     response = supabase.table("users").insert(data).execute()
     return response
+@app.get("/add")
+def add():
+    return 10+20
